@@ -1,0 +1,18 @@
+.portfolio-page__filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    @extend %list;
+}
+
+.portfolio-page {
+    @extend %section;
+}
+
+.portfolio-page__container {
+    @extend %container;
+}
+
+.portfolio-page__title-hidden {
+    @extend %visually-hidden;
+}

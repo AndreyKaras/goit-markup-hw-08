@@ -1,0 +1,77 @@
+/*  what_we_do section */
+.examples__section {
+    padding-top: 0px;
+    @extend %section;
+}
+
+.examples__section__list {
+    padding-top: 0px;
+    display: flex;
+    @extend %list;
+}
+
+.examples__section__title, .client__section__title, .team__section__title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.examples__section__image {
+    display: block;
+}
+
+.examples__section__item {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    & + .examples__section__item {
+        margin-left: 30px;
+    }
+}
+
+.examples__section__card-thumb, .porfolio__page__card-thumb {
+    position: relative;
+    overflow: hidden;
+ }
+
+.examples__section__thumb-text {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-color: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    width: 100%;
+
+    &--first {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &--second {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &--last {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.examples__section__text {
+    color: $white-color ;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.examples__section__container {
+    @extend %container;
+}
