@@ -2,6 +2,18 @@
 .page-footer__container {
     @extend %container;
     display: flex;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+        align-items: baseline;
+        text-align: center;
+    }
 }
 
 .page-footer__title {
@@ -17,11 +29,23 @@
 
 .page-footer__social {
     margin-left:70px;
+
+    @media screen and (max-width: 767px) {
+        margin-left: 0px;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        margin-left: 165px;
+    }
 }
 
 .page-footer__form-wrap {
-margin-left: auto;
-    
+    margin-left: auto;
+@media screen and (min-width:768px) and (max-width: 1199px) {
+    margin-left: 166px;
+    margin-top: 60px;
+}
 }
 
 .page-footer {
@@ -29,6 +53,15 @@ margin-left: auto;
     height: 252px;
     padding-top: 60px;
     padding-bottom: 60px;
+    
+
+    @media screen and (max-width: 767px) {
+        height: 603px;
+        min-width: 480px;
+    }
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        height: 463px;
+    }
 }
 
 .page-footer__address {
@@ -39,6 +72,16 @@ margin-left: auto;
     line-height: 1.71;
     width: 231px;
     margin-top: 20px;
+
+    @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    }
+}
+
+.page-footer__wrapper {
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        padding-left: 76px;
+    }
 }
 
 .page-footer__list {
@@ -127,3 +170,4 @@ margin-left: auto;
     color: currentColor;
     fill: $white-color;
 }
+

@@ -3,6 +3,27 @@
     justify-content: center;
     margin-bottom: 50px;
     @extend %list;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 40px;
+        justify-content: left;
+        flex-wrap: wrap;
+        max-width: 326px;
+        row-gap: 15px;
+    }
+    
+}
+
+.portfolio-page__button {
+    &:nth-last-child(n+2) {
+        margin-left: 0px;
+    }
+    &:nth-last-child(n+3) {
+        margin-left: 8px;
+    }
+    &:nth-last-child(n+5) {
+        margin-left: 0px;
+    }
 }
 
 .portfolio-page {

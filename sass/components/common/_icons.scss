@@ -1,6 +1,10 @@
 .icons {
     display: flex;
     @extend %list;
+
+    @media screen and (max-width: 1199px) {
+        justify-content: center;
+    }
 }
 
 .icons__link {

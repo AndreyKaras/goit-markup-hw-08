@@ -2,13 +2,11 @@
 
 .hero-section {
     background-color: $background-footer-header;
-    height: 600px;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     max-width: 1600px;
-    min-height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
@@ -16,10 +14,75 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
     ),
-    url("../images/photo_hero.jpg");
+    url("../images/photo_hero.jpg") ;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+    ), url(/images/studio/hero/desktop/Img@2x.jpg);}
+
+  /* Переопределяем путь к 2x изображению
+     если плотность экрана как минимум 2 */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media screen and (max-width: 767px) {
+        max-height: 400px;
+        min-width: 480px;
+        max-width: 480px;
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ), url(/images/studio/hero/mobile/Headerimg.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+    ), url(/images/studio/hero/mobile/Header\ img@2x.jpg )}
+    }
+  
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-top: 118px;
+        padding-bottom: 118px;
+        width: 480px;   
+        min-height: 400px;
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ), url(/images/studio/hero/tablet/header-img.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ), url(/images/studio/hero/tablet/Header\ img@2x.jpg);}
+    }
+       
+        
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-top: 118px;
+        padding-bottom: 118px;
+        width: 768px;
+        min-height: 400px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        min-height: 600px;
+    }
 }
 
 .hero-section__title {
@@ -38,4 +101,14 @@
     margin-bottom: 30px;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media screen and (max-width: 1199px) {
+        font-size: 26px;
+        line-height: 1.61;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 204px;
+        margin-right: 204px;
+    }
 }
