@@ -14,7 +14,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
     ),
-    url("../images/photo_hero.jpg") ;
+    url("../images/studio/hero/desktop/img.jpg") ;
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -23,7 +23,7 @@
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
-    ), url(/images/studio/hero/desktop/Img@2x.jpg);}
+    ), url(../images/studio/hero/desktop/Img@2x.jpg);}
 
   /* Переопределяем путь к 2x изображению
      если плотность экрана как минимум 2 */
@@ -39,7 +39,7 @@
             to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
-        ), url(/images/studio/hero/mobile/Headerimg.jpg);
+        ), url(../images/studio/hero/mobile/Headerimg.jpg);
 
         @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -48,7 +48,7 @@
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
-    ), url(/images/studio/hero/mobile/Header\ img@2x.jpg )}
+    ), url(../images/studio/hero/mobile/Header\ img@2x.jpg )}
     }
   
     @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -60,7 +60,7 @@
             to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
-        ), url(/images/studio/hero/tablet/header-img.jpg);
+        ), url(../images/studio/hero/tablet/header-img.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -69,7 +69,7 @@
             to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
-        ), url(/images/studio/hero/tablet/Header\ img@2x.jpg);}
+        ), url(../images/studio/hero/tablet/Header\ img@2x.jpg);}
     }
        
         
