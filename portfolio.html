@@ -30,6 +30,17 @@
                 <a href="" class="site-nav__link"> Контакти </a> </li>
         </ul>
     </nav>
+            <button type="button" 
+            class="page-header__button-mobile js-open-menu" 
+            data-menu-button 
+            aria-expanded="false" 
+            aria-label="mobile-menu">
+                <svg width="24px" 
+                    height="16px" 
+                    class="page-header__icons">
+                    <use href="./images/icons.svg#icon-menu" ></use> 
+                </svg>
+            </button>
 
     <ul class="page-header__contact">  
         <li class="page-header__address">  
@@ -44,6 +55,47 @@
                 <use href="./images/icons.svg#icon-smartphone-1"> </use>
             </svg> +38 096 111 11 11 </a> </li>
     </ul>
+     <!-- разметка телефона (меню + навигация) -->
+     <div class="menu-container js-menu-container" id="mobile-menu" data-menu >
+        <button type="button"
+        class="page-header__button-mobile page-header__button-mobile--close js-close-menu" 
+        aria-expanded="false" 
+        aria-label="menu-container">
+            <svg 
+            width="18px" 
+            height="18px" 
+            class="page-header__icons">
+                <use href="./images/icons.svg#icon-close-second" class="page-header__cross"></use>
+            </svg>
+        </button>
+        <ul class="site-nav__list-mobile">
+            <li class="site-nav__item site-nav__item-mobile">
+                <a href="index.html" class="site-nav__link site-nav__link-mobile "> Студія </a> </li>
+            <li class="site-nav__item site-nav__item-mobile">
+                <a href="portfolio.html" class="site-nav__link site-nav__link-mobile site-nav__link--current"> Портфоліо </a> </li>
+            <li class="site-nav__item site-nav__item-mobile">
+                <a href="" class="site-nav__link site-nav__link-mobile"> Контакти </a> </li>
+        </ul>
+        <ul class="page-header__contact-mobile">  
+            <li class="page-header__address page-header__address-mobile"> 
+                <a class="page-header__link page-header__link-mobile" href="tel:+380961111111"> 
+                <svg class="page-header__image page-header__image-tel" width="10px" height="16px"> 
+                    <use href="./images/icons.svg#icon-smartphone-1"> </use>
+                </svg> +38 096 111 11 11 </a> </li>
+            <li class="page-header__address">  
+                <a class="page-header__link" href="mailto:info@devstudio.com"> 
+                    <svg class="page-header__image page-header__image-mail" width="16px" height="12px"> 
+                        <use href="./images/icons.svg#icon-envelope-1"></use>
+                    </svg> info@devstudio.com </a> 
+            </li>
+        </ul>
+        <ul class="mobile-socials">
+            <li class="mobile-socials__item"><a class="mobile-socials__link" href=""> Instagram </a></li>
+            <li class="mobile-socials__item"><a class="mobile-socials__link" href=""> Twitter </a></li> 
+            <li class="mobile-socials__item"><a class="mobile-socials__link" href=""> Facebook</a></li>
+            <li class="mobile-socials__item"><a class="mobile-socials__link" href=""> LinkedIn </a></li>
+        </ul>
+    </div>
     </div>
 </header>
     <!-- main -->
@@ -104,7 +156,7 @@
                     <li class="portfolio-page__card">
                         <a href="" class="portfolio-page__link">
                             <div class="porfolio__page__card-thumb">
-                            <img class="porfolio__page__image" src="./images/portfolio/img3.jpg" alt="">
+                            <img  class="portfolio-page__image" src="./images/portfolio/img3.jpg" alt="">
                             <div class="portfolio-page__backdrop-card">
                                     <p class="portfolio-page__backdrop-card-text"> Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -136,7 +188,7 @@
                     <li class="portfolio-page__card">
                         <a href="" class="portfolio-page__link">
                             <div class="porfolio__page__card-thumb">
-                            <img src="./images/portfolio/img5.jpg" alt="">
+                            <img class="portfolio-page__image" src="./images/portfolio/img5.jpg" alt="">
                             <div class="portfolio-page__backdrop-card">
                                     <p class="portfolio-page__backdrop-card-text"> Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                         дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -287,6 +339,7 @@
     
 </div>
 </footer>
+<script src="./js/menu-mobile.js" ></script>
 </body>
 
 </html>

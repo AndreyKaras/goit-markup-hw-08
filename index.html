@@ -27,23 +27,74 @@
                     <a href="" class="site-nav__link"> Контакти </a> </li>
             </ul>
         </nav>
+        <button type="button" 
+                    class="page-header__button-mobile js-open-menu" 
+                    data-menu-button 
+                    aria-expanded="false" 
+                    aria-label="mobile-menu">
+            <svg width="24px" 
+                    height="16px" 
+                    class="page-header__icons">
+                    <use href="./images/icons.svg#icon-menu" ></use> </svg>
+            </button>
 
         <ul class="page-header__contact">  
             <li class="page-header__address">  
                 <a class="page-header__link" href="mailto:info@devstudio.com"> 
-                    <svg class="page-header__image" width="16px" height="12px"> 
+                    <svg class="page-header__image page-header__image-mail" width="16px" height="12px"> 
                         <use href="./images/icons.svg#icon-envelope-1"></use>
                     </svg> info@devstudio.com </a> 
             </li>
             <li class="page-header__address"> 
                 <a class="page-header__link" href="tel:+380961111111"> 
-                <svg class="page-header__image" width="10px" height="16px"> 
+                <svg class="page-header__image page-header__image-tel" width="10px" height="16px"> 
                     <use href="./images/icons.svg#icon-smartphone-1"> </use>
                 </svg> +38 096 111 11 11 </a> </li>
         </ul>
+
+        <!-- разметка телефона (меню + навигация) -->
+        <div class="menu-container js-menu-container" id="mobile-menu" data-menu >
+            <button type="button"
+            class="page-header__button-mobile page-header__button-mobile--close js-close-menu" 
+            aria-expanded="false" 
+            aria-label="menu-container">
+                <svg 
+                width="18px" 
+                height="18px" 
+                class="page-header__icons">
+                    <use href="./images/icons.svg#icon-close-second" class="page-header__cross"></use>
+                </svg>
+            </button>
+            <ul class="site-nav__list-mobile">
+                <li class="site-nav__item site-nav__item-mobile">
+                    <a href="index.html" class="site-nav__link site-nav__link-mobile site-nav__link--current"> Студія </a> </li>
+                <li class="site-nav__item site-nav__item-mobile">
+                    <a href="portfolio.html" class="site-nav__link site-nav__link-mobile"> Портфоліо </a> </li>
+                <li class="site-nav__item site-nav__item-mobile">
+                    <a href="" class="site-nav__link site-nav__link-mobile"> Контакти </a> </li>
+            </ul>
+            <ul class="page-header__contact-mobile">  
+                <li class="page-header__address page-header__address-mobile"> 
+                    <a class="page-header__link page-header__link-mobile" href="tel:+380961111111"> 
+                    <svg class="page-header__image page-header__image-tel" width="10px" height="16px"> 
+                        <use href="./images/icons.svg#icon-smartphone-1"> </use>
+                    </svg> +38 096 111 11 11 </a> </li>
+                <li class="page-header__address">  
+                    <a class="page-header__link" href="mailto:info@devstudio.com"> 
+                        <svg class="page-header__image page-header__image-mail" width="16px" height="12px"> 
+                            <use href="./images/icons.svg#icon-envelope-1"></use>
+                        </svg> info@devstudio.com </a> 
+                </li>
+            </ul>
+            <ul class="mobile-socials">
+                <li class="mobile-socials__item"><a class="mobile-socials__link" href=""> Instagram </a></li>
+                <li class="mobile-socials__item"><a class="mobile-socials__link" href=""> Twitter </a></li> 
+                <li class="mobile-socials__item"><a class="mobile-socials__link" href=""> Facebook</a></li>
+                <li class="mobile-socials__item"><a class="mobile-socials__link" href=""> LinkedIn </a></li>
+            </ul>
+        </div>
         </div>
     </header>
-
     <!-- main -->
     <main>
 
@@ -53,7 +104,7 @@
                 <button class="button-hero" type="button" data-modal-open> Замовити послугу </button>
                 <div class="hero-section__backdrop is-hidden" data-modal> 
                     <div class="modal"> 
-                        <button data-modal-close type="button" class="button-modal"> 
+                        <button data-modal-close type="button" class="button-modal">
                             <svg class="button-close__icon">
                                 <use  href="./images/icons.svg#icon-close"> </use>
                             </svg> 
@@ -127,7 +178,7 @@
                         </svg>
                     </div>
                     <h3 class="features__section__title"> УВАГА ДО ДЕТАЛЕЙ </h3>
-                    <p class="features__section__text"> Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+                    <p class="features__section__text features__section__text--first"> Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
                 </li>
 
                 <li  class="features__section__element">
@@ -140,7 +191,7 @@
                     <p class="features__section__text"> Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
                 </li>
 
-                <li  class="features__section__element">
+                <li  class="features__section__element features__section__element--third">
                     <div class="features__section__item"> 
                         <svg class="features__section__icon"> 
                             <use href="./images/icons.svg#icon-diagram" ></use>
@@ -157,7 +208,7 @@
                         </svg>
                     </div>
                     <h3 class="features__section__title"> СУЧАСНІ ТЕХНОЛОГІЇ </h3>
-                    <p class="features__section__text"> Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+                    <p class="features__section__text features__section__text--last"> Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
                 </li>
             </ul>
         </div>
@@ -171,17 +222,28 @@
             <ul class="examples__section__list">
                 <li class="examples__section__item"> 
                     <div class="examples__section__card-thumb"> 
-                        <img class="examples__section__image" src="./images/studio/what_we_do/box1/box1.jpg" alt="програмування" width="370"> 
-                        <div class="examples__section__thumb-text examples__section__thumb-text--first">
+                        <img class="examples__section__image" 
+                        srcset="./images/studio/example/desktop/img.jpg 1x, ./images/studio/example/desktop/img@2x.jpg 2x"
+                             src="./images/studio/example/desktop/img.jpg 1x" 
+                             alt="програмування" 
+                             width="370"> 
+                    <div class="examples__section__thumb-text examples__section__thumb-text--first">
                             <p class="examples__section__text">Десктопні додатки</p>
                         </div>
                     </div>
                 </li>
-                <li class="examples__section__item"> <img class="examples__section__image"src="./images/studio/what_we_do/box2/box2.jpg" alt="веб-дизайн" width="370">   
+                <li class="examples__section__item"> 
+                    <img class="examples__section__image"
+                         srcset="./images/studio/example/mobile/img.jpg 1x, ./images/studio/example/mobile/img@2x.jpg 2x"
+                         src="./images/studio/example/mobile/img.jpg 1x" 
+                         alt="веб-дизайн" 
+                         width="370">   
                     <div class="examples__section__thumb-text examples__section__thumb-text--second">
                         <p class="examples__section__text">Мобільні додатки</p>
                     </div> </li>
-                <li class="examples__section__item"> <img class="examples__section__image"src="./images/studio/what_we_do/box3/box3.jpg" alt="створення веб-продуктів" width="370">
+                <li class="examples__section__item"> <img class="examples__section__image"
+                    srcset="./images/studio/example/tablet/img.jpg 1x, ./images/studio/example/tablet/img@2x.jpg 2x"
+                    src="./images/studio/example/tablet/img.jpg 1x" alt="створення веб-продуктів" width="370">
                     <div class="examples__section__thumb-text examples__section__thumb-text--last">
                         <p class="examples__section__text">Дизайнерські рішення</p>
                     </div>
@@ -195,8 +257,29 @@
             <div class="team__section__container">
                 <h2 class="team__section__title"> Наша команда </h2>
                 <ul class="team__section__cards-list">
-                    <li class="team__section__cards-item"> 
-                        <img class="team__section__cards-image" src="./images/studio/our_team/team_card1/card1.jpg" alt="" width="270">
+                    <li class="team__section__cards-item team__section__cards-item--margin"> 
+            
+                        <picture> 
+                        <source     
+                        srcset="./images/studio/team/desktop/first-img/img.jpg 1x, ./images/studio/team/desktop/first-img/img@2x.jpg 2x"
+                        media="(min-width: 1200px)"
+                        type="image/jpeg"/>
+                        <source 
+                        srcset="./images/studio/team/tablet/first-img/img.jpg 1x, ./images/studio/team/tablet/first-img/img@2x.jpg 2x"
+                        media="(min-width: 768px)"
+                        type="image/jpeg"
+                        />                        
+                        <source 
+                        srcset="./images/studio/team/mob/first-img/img.jpg 1x, ./images/studio/team/mob/first-img/img@2x.jpg 2x"
+                        media="(max-width: 767px)"
+                        type="image/jpeg"
+                        />
+
+                        <img class="team__section__cards-image" 
+                             src="./images/studio/team/mob/first-img/img.jpg" 
+                             alt="." 
+                             width="270">
+                        </picture>
                         <div class="team__section__cards-info"> 
                             <h3 class="team__section__title-card"> Ігор Дем'яненко </h3>
                             <p lang="en" class="team__section__text"> Product Designer </p>
@@ -233,7 +316,30 @@
                         </div>
                     </li>
 
-                    <li class="team__section__cards-item"> <img class="team__section__cards-image src=" src="./images/studio/our_team/team_card2/card2.jpg" alt="" width="270">
+                    <li class="team__section__cards-item team__section__cards-item--margin"> 
+                        
+                        <picture> 
+                            <source     
+                            srcset="./images/studio/team/desktop/second-img/img.jpg 1x, ./images/studio/team/desktop/second-img/img@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            type="image/jpeg"/>
+                            <source 
+                            srcset="./images/studio/team/tablet/second-img/img.jpg 1x, ./images/studio/team/tablet/second-img/img@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            type="image/jpeg"
+                            />                        
+                            <source 
+                            srcset="./images/studio/team/mob/second-img/img.jpg 1x, ./images/studio/team/mob/second-img/img@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            type="image/jpeg"
+                            />
+    
+                            <img class="team__section__cards-image" 
+                                 src="./images/studio/team/mob/second-img/img.jpg" 
+                                 alt="" 
+                                 width="270">
+                            </picture>
+                        
                         <div class="team__section__cards-info">
                             <h3 class="team__section__title-card"> Ольга Рєпіна </h3>
                             <p lang="en" class="team__section__text"> Frontend Developer </p>
@@ -270,7 +376,29 @@
                         </div>
                     </li>
 
-                    <li class="team__section__cards-item"> <img class="team__section__cards-image src=" src="./images/studio/our_team/team_card3/card3.jpg" alt="" width="270">
+                    <li class="team__section__cards-item team__section__cards-item--margin-left"> 
+                        <picture> 
+                            <source     
+                            srcset="./images/studio/team/desktop/third-img/img.jpg 1x, ./images/studio/team/desktop/third-img/img@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            type="image/jpeg"/>
+                            <source 
+                            srcset="./images/studio/team/tablet/third-img/img.jpg 1x, ./images/studio/team/tablet/third-img/img@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            type="image/jpeg"
+                            />                        
+                            <source 
+                            srcset="./images/studio/team/mob/third-img/img.jpg 1x, ./images/studio/team/mob/third-img/img@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            type="image/jpeg"
+                            />
+    
+                            <img class="team__section__cards-image" 
+                                 src="./images/studio/team/mob/third-img/img.jpg" 
+                                 alt="" 
+                                 width="270">
+                            </picture>
+                        
                          <div class="team__section__cards-info">
                             <h3 class="team__section__title-card"> Микола Тарасов </h3>
                             <p lang="en" class="team__section__text"> Marketing </p>
@@ -307,7 +435,28 @@
                         </div>
                     </li>
 
-                    <li class="team__section__cards-item"> <img class="team__section__cards-image src=" src="./images/studio/our_team/team_card4/card4.jpg" alt="" width="270">
+                    <li class="team__section__cards-item"> 
+                        <picture> 
+                            <source     
+                            srcset="./images/studio/team/desktop/fourth-img/img.jpg 1x, ./images/studio/team/desktop/fourth-img/img@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            type="image/jpeg"/>
+                            <source 
+                            srcset="./images/studio/team/tablet/fourth-img/img.jpg 1x, ./images/studio/team/tablet/fourth-img/img@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            type="image/jpeg"
+                            />                        
+                            <source 
+                            srcset="./images/studio/team/mob/fourth-img/img.jpg 1x, ./images/studio/team/mob/fourth-img/img@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            type="image/jpeg"
+                            />
+    
+                            <img class="team__section__cards-image" 
+                                 src="./images/studio/team/mob/fourth-img/img.jpg" 
+                                 alt="" 
+                                 width="270">
+                            </picture>
                         <div class="team__section__cards-info">
                             <h3 class="team__section__title-card"> Михайло Єрмаков </h3>
                             <p lang="en" class="team__section__text"> UI Designer </p>
@@ -403,7 +552,7 @@
     <!-- footer -->
     <footer class="page-footer">
         <div class="page-footer__container">
-            <div>
+            <div class="page-footer__wrapper">
                 <a href="./index.html" class="page-logo"> <span class="page-logo--color">Web</span>Studio </a>
                 <address class="page-footer__address">
                     <ul class="page-footer__list">
@@ -471,6 +620,7 @@
 </div>
 </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu-mobile.js" ></script>
 </body>
 
 </html>
