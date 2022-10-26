@@ -21,6 +21,9 @@ display: flex;
 
 .team__section__cards-image {
     display: block;
+    @media screen and (max-width:479px) {
+        width: 100%;
+    }
     @media screen and (max-width:767px) {
         width: 450px;
         height: 460px;

@@ -1464,6 +1464,11 @@ body {
 .team__section__cards-image {
   display: block;
 }
+@media screen and (max-width: 479px) {
+  .team__section__cards-image {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 767px) {
   .team__section__cards-image {
     width: 450px;
