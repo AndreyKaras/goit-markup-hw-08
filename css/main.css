@@ -1466,7 +1466,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .team__section__cards-image {
-    width: 100%;
+    width: 450px;
     height: 460px;
   }
 }
