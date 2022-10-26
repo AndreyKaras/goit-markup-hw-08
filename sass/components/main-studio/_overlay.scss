@@ -34,15 +34,18 @@
       top: 50%;
       transform: translate(-50%, -50%) scale(1); 
 
-      @media screen and (max-width:1199px) {
+        @media screen and (max-width: 467px) {
+        width: 100%;
+        padding: 20px;
+       }
+
+      @media screen and (min-width:468px) and (max-width:1199px) {
         max-width: 450px;
         min-height: 609px;
       }
 
       @media screen and (min-width:1199px) {
           position: absolute;
-        
-
         min-height: 581px;
         max-width: 528px;
       }

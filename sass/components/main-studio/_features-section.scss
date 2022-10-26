@@ -8,13 +8,16 @@
     height: 120px;
     margin-bottom: 30px;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (min-width:467px) and (max-width: 767px) {
         width: 450px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 354px;
     }
+    @media screen and (max-width: 467px) {
+        width: 100%;
+      }
 }
 
 .features__section__icon {

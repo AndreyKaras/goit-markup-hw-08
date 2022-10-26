@@ -21,10 +21,17 @@
         border-radius: 4px;
         background: border-box;
     
-            @media screen and (max-width: 1199px) {
+        
+        @media screen and (max-width: 467px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+            @media screen and (min-width:468px) and (max-width: 1199px) {
                 margin-bottom: 20px;
                 width: 450px;
             }
+
     }
     
     
