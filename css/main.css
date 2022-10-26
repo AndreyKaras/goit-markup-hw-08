@@ -257,7 +257,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.page-footer__card-set, .page-footer__list, .portfolio-page__list, .portfolio-page__filters, .client__section__list, .icons, .team__section__cards-list, .examples__section__list, .features__section__list, .form__inputs, .mobile-socials, .page-header__contact-mobile, .page-header__contact, .site-nav__item, .site-nav__list, .site-nav {
+.page-footer__card-set, .page-footer__list, .portfolio-page__list, .portfolio-page__filters, .client__section__list, .icons, .team__section__cards-list, .examples__section__list, .features__section__list, .form__inputs, .mobile-socials, .page-header__list-mobile, .page-header__contact-mobile, .page-header__contact, .site-nav__item, .site-nav__list, .site-nav {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -518,11 +518,21 @@ body {
 }
 
 .menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: fixed;
   top: 0%;
   left: 0%;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 999;
   min-width: 480px;
   -webkit-transform: translateX(300%);
@@ -773,7 +783,6 @@ body {
 .site-nav__list-mobile {
   padding: 0;
   margin: 0;
-  margin-bottom: 306px;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.17;
@@ -787,6 +796,7 @@ body {
 
 .site-nav__item-mobile {
   margin-bottom: 32px;
+  margin-right: 0px;
 }
 .site-nav__item-mobile:last-child {
   margin-bottom: 0px;
@@ -866,6 +876,12 @@ body {
   .hero-section {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/studio/hero/desktop/Img@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/hero/desktop/Img@2x.jpg);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .hero-section {
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -963,13 +979,17 @@ body {
 .modal {
   padding: 40px;
   background-color: #FFFFFF;
-  position: relative;
+  position: absolute;
   margin-left: auto;
   margin-right: auto;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 @media screen and (max-width: 1199px) {
   .modal {
@@ -980,12 +1000,8 @@ body {
 @media screen and (min-width: 1199px) {
   .modal {
     position: absolute;
-    left: 50%;
-    top: 50%;
     min-height: 581px;
     max-width: 528px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -1236,8 +1252,6 @@ body {
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 767px) {
   .features__section__item {
@@ -1294,6 +1308,7 @@ body {
 @media screen and (max-width: 767px) {
   .features__section__list {
     display: block;
+    text-align: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
